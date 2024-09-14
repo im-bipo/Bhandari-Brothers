@@ -3,6 +3,7 @@
 import { useState } from "react";
 import NavLink from "./NavLinks";
 import { Menu, X } from "lucide-react";
+import { Button } from "../ui/button";
 
 const NavLinkList = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,9 +46,6 @@ const NavList = ({ toggleMenu }: { toggleMenu?: () => void | boolean }) => {
       <NavLink href="/" {...(toggleMenu && { onClick: toggleMenu })}>
         Home
       </NavLink>
-      <NavLink href="/hire-now" {...(toggleMenu && { onClick: toggleMenu })}>
-        Hire Now
-      </NavLink>
       <NavLink href="/jobs" {...(toggleMenu && { onClick: toggleMenu })}>
         Jobs
       </NavLink>
@@ -56,6 +54,9 @@ const NavList = ({ toggleMenu }: { toggleMenu?: () => void | boolean }) => {
       </NavLink>
       <NavLink href="/contact" {...(toggleMenu && { onClick: toggleMenu })}>
         Contact
+      </NavLink>
+      <NavLink href="/hire-now" {...(toggleMenu && { onClick: toggleMenu })}>
+        <Button>Hire Now</Button>
       </NavLink>
     </div>
   );
