@@ -92,8 +92,24 @@ const JobApplicationForm = ({
           <Input
             type="file"
             accept="image/*,.pdf"
-            {...register("resume", { required: "Resume is required" })}
+            {...register("resume", {
+              required: "Resume is required",
+              validate: {
+                fileType: (value) => {
+                  const allowedTypes = [
+                    "image/jpeg",
+                    "image/png",
+                    "image/jpg",
+                    "application/pdf",
+                  ];
+                  return value[0] && allowedTypes.includes(value[0].type)
+                    ? true
+                    : "Only JPG, PNG, JPEG, or PDF files are allowed";
+                },
+              },
+            })}
           />
+
           {errors.resume && (
             <span className="text-red-500">
               {errors.resume.message as string}

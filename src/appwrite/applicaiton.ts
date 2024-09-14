@@ -1,6 +1,7 @@
 "use server";
 import { ID, Query } from "appwrite";
 import { RESUME_BUCKET_ID, storage } from "./config";
+import { sendMail } from "@/lib/mail";
 
 // Create a new job application
 export const newApplication = async (data: FormData) => {
@@ -25,7 +26,7 @@ export const newApplication = async (data: FormData) => {
       Name: name,
       Email: email,
       "Cover Letter": coverLetter,
-      Resume: `https://cloud.appwrite.io/v1/storage/buckets/66db01400039fcd4f0ad/files/${resumeId}/view?project=66da99af00092e3720ed&project=66da99af00092e3720ed&mode=admin`,
+      Resume: `https://cloud.appwrite.io/v1/storage/buckets/${process.env.NODE_ENV_RESUME_BUCKET_ID}/files/${resumeId}/view?project=${process.env.NODE_ENV_PROJECT_ID}&project=${process.env.NODE_ENV_PROJECT_ID}&mode=admin`,
       ResumeID: resumeId,
       e_gs_SheetName: "Job Applications",
     };
@@ -41,6 +42,7 @@ export const newApplication = async (data: FormData) => {
       .then((response) => response.status)
       .then((code) => {
         if (code === 200) {
+          // sendMail();
           return;
         } else {
           throw new Error("Failed to submit application");
@@ -48,7 +50,7 @@ export const newApplication = async (data: FormData) => {
       })
       .catch((error) => console.error("Error:", error));
   } catch (err) {
-    console.error("Error uploading resume: ");
+    console.error("Error uploading resume: ", err);
     throw new Error("Failed to upload resume");
   }
 };

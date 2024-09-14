@@ -11,7 +11,7 @@ const AboutUs = () => {
           <div className="relative mb-8">
             <Image
               alt="Bhandari Brothers"
-              src="/images/happyemployee/employee6.png"
+              src="/images/md/Prakash Bhandari.jpg"
               width={600}
               height={400}
               className="w-full rounded-md h-[30rem] object-cover"

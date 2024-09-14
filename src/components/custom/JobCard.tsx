@@ -11,7 +11,6 @@ import {
   JobDescription,
 } from "../ui/jobCard";
 import Image from "next/image";
-import { Clock, Globe, LucideImport } from "lucide-react";
 import Link from "next/link";
 import { JobTypes } from "@/appwrite/jobs";
 

@@ -27,12 +27,12 @@ const App = () => {
           </div>
         </div>
       </main>
+      <StartHire />
       <ServiceCard />
       <WhyChooseUs/>
-      <StartHire />
-      <OurServices/>
-      <OurCertifications/>
       <CompanyTestimonials />
+      <OurCertifications/>
+      <OurServices/>
       {/* <JobCollection /> */}
       <EmployeeTestimonials />
     </>

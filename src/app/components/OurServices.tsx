@@ -52,7 +52,7 @@ const OurServices = () => {
         {/* right  */}
         <div className="relative sm:mx-12">
           <img
-            src="/images/happyemployee/employee6.png"
+            src="/images/md/Prakash Bhandari.jpg"
             width={300}
             height={300}
             alt="Service Image"
@@ -64,7 +64,7 @@ const OurServices = () => {
           >
             <div className="pl-3">
               <h6 className="font-medium text-primary">
-                Binod Parsad Bhandari
+              Prakash Bhandari
               </h6>
               <p className="text-gray-400">CEO - Bhandari Brothers</p>
             </div>

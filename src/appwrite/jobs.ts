@@ -1,20 +1,18 @@
 "use server";
-import { Models } from "appwrite";
+import { ID, Models } from "appwrite";
 import { DATABASE_ID, databases, JOBS_COLLECTION_ID } from "./config";
 import { notFound } from "next/navigation";
+import { revalidatePath } from "next/cache";
+
 export type JobTypes = Models.Document & {
-  applicationsCollection?: string[];
-  companyName?: string;
-  description?: string;
-  expireDate?: string;
   jobTitle?: string;
-  requirements?: string;
-  urgency?: "normal" | "urgent";
-  companyLogoUrl?: string;
-  salaryRange?: string;
+  companyName?: string;
+  expireDate?: string;
   location?: string;
   workingHours?: string;
-  featured?: boolean;
+  numberOfPosition?: number;
+  description?: string;
+  requirements?: string;
 };
 
 export const getJobs = async () => {
@@ -25,6 +23,7 @@ export const getJobs = async () => {
   return response.documents;
 };
 export const getJobById = async (jobId: string) => {
+  revalidatePath(`jobs/${jobId}`);
   try {
     const response = await databases.getDocument(
       DATABASE_ID,
@@ -33,5 +32,24 @@ export const getJobById = async (jobId: string) => {
     );
     return response;
   } catch (error) {}
-  notFound()
+  notFound();
+};
+
+export const createJob = async (data: JobTypes) => {
+  const res = await databases.createDocument(
+    DATABASE_ID,
+    JOBS_COLLECTION_ID,
+    ID.unique(),
+    {
+      jobTitle: data.jobTitle,
+      companyName: data.companyName,
+      expireDate: data.expireDate,
+      location: data.location,
+      workingHours: data.workingHours,
+      numberOfPosition: Number(data.numberOfPosition),
+      description: data.description,
+      requirements: data.requirements,
+    }
+  );
+  console.log(res);
 };

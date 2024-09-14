@@ -1,161 +1,151 @@
 "use client";
 import * as React from "react";
-import { useState } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { LoaderIcon } from "lucide-react";
+import Image from "next/image";
+import { createJob, JobTypes } from "@/appwrite/jobs";
 
 const AddJobForm = () => {
-  const [formSubmission, setFormSubmission] = useState(false);
-  const [jobData, setJobData] = useState({
-    jobTitle: "",
-    companyName: "",
-    expireDate: "",
-    urgency: "normal",
-    numberOfPosition: 1,
-    description: "",
-    requirements: "",
+  const { register, handleSubmit, reset, formState: { isSubmitting, errors } } = useForm<JobTypes>({
+    defaultValues: {
+      jobTitle: "",
+      companyName: "",
+      expireDate: "",
+      location: "",
+      workingHours: "",
+      numberOfPosition: 1,
+      description: "",
+      requirements: "",
+    },
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setJobData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setFormSubmission(true);
-
-    const job = {
-      ...jobData,
-      requirements: jobData.requirements.split(","),
-    };
-
+  const onSubmit: SubmitHandler<JobTypes> = async (data) => {
     try {
-      //   await createJob(job);
-      setFormSubmission(false);
-      // Reset form after successful submission
-      setJobData({
-        jobTitle: "",
-        companyName: "",
-        expireDate: "",
-        urgency: "normal",
-        numberOfPosition: 1,
-        description: "",
-        requirements: "",
-      });
+      await createJob(data);
+      reset();
     } catch (error) {
       console.error("Failed to create job", error);
-      setFormSubmission(false);
     }
   };
 
   return (
-    <div className="max-w-4xl mx-auto my-10 p-4">
-      <h2 className="text-2xl font-bold mb-4">Add Your Job</h2>
-      <form
-        onSubmit={handleSubmit}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-4"
-      >
-        <div className="grid gap-2">
-          <Label htmlFor="jobTitle">Job Title</Label>
-          <Input
-            type="text"
-            id="jobTitle"
-            name="jobTitle"
-            value={jobData.jobTitle}
-            onChange={handleChange}
-            required
+    <div className="container mx-auto my-10 p-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {/* Image section for large screens */}
+        <div className="hidden lg:block">
+          <Image
+            height={800}
+            width={1200}
+            src="/images/md/we_are_hiring.jpg"
+            alt="Job"
+            className="rounded-md"
           />
         </div>
-        <div className="grid gap-2">
-          <Label htmlFor="companyName">Company Name</Label>
-          <Input
-            type="text"
-            id="companyName"
-            name="companyName"
-            value={jobData.companyName}
-            onChange={handleChange}
-            required
-          />
+        {/* Form section */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-primary">Add Your Job</h2>
+          <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="jobTitle">Job Title</Label>
+              <Input
+                id="jobTitle"
+                {...register("jobTitle", { required: "Job Title is required" })}
+              />
+              {errors.jobTitle && (
+                <p className="text-red-600 text-sm">{errors.jobTitle.message}</p>
+              )}
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="companyName">Company Name</Label>
+              <Input
+                id="companyName"
+                {...register("companyName", { required: "Company Name is required" })}
+              />
+              {errors.companyName && (
+                <p className="text-red-600 text-sm">{errors.companyName.message}</p>
+              )}
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="expireDate">Expiration Date</Label>
+              <Input
+                type="date"
+                id="expireDate"
+                {...register("expireDate", { required: "Expiration Date is required" })}
+              />
+              {errors.expireDate && (
+                <p className="text-red-600 text-sm">{errors.expireDate.message}</p>
+              )}
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="location">Location</Label>
+              <Input
+                id="location"
+                {...register("location", { required: "Location is required" })}
+              />
+              {errors.location && (
+                <p className="text-red-600 text-sm">{errors.location.message}</p>
+              )}
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="workingHours">Working Hours</Label>
+              <Input
+                id="workingHours"
+                placeholder="30 hours/week"
+                {...register("workingHours", { required: "Working Hours are required" })}
+              />
+              {errors.workingHours && (
+                <p className="text-red-600 text-sm">{errors.workingHours.message}</p>
+              )}
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="numberOfPosition">Number of Positions</Label>
+              <Input
+                type="number"
+                id="numberOfPosition"
+                {...register("numberOfPosition", { required: "Number of Positions is required" })}
+              />
+              {errors.numberOfPosition && (
+                <p className="text-red-600 text-sm">{errors.numberOfPosition.message}</p>
+              )}
+            </div>
+            <div className="col-span-1 lg:col-span-2 grid gap-2">
+              <Label htmlFor="description">Job Description</Label>
+              <Textarea
+                id="description"
+                {...register("description", { required: "Job Description is required" })}
+                placeholder="Describe the job in detail..."
+              />
+              {errors.description && (
+                <p className="text-red-600 text-sm">{errors.description.message}</p>
+              )}
+            </div>
+            <div className="col-span-1 lg:col-span-2 grid gap-2">
+              <Label htmlFor="requirements">Requirements</Label>
+              <Textarea
+                id="requirements"
+                {...register("requirements", { required: "Requirements are required" })}
+                placeholder="Enter requirements separated by commas"
+              />
+              {errors.requirements && (
+                <p className="text-red-600 text-sm">{errors.requirements.message}</p>
+              )}
+            </div>
+            <div className="col-span-1 lg:col-span-2">
+              <Button type="submit">
+                {isSubmitting ? (
+                  <LoaderIcon className="animate-spin" />
+                ) : (
+                  "Send Proposal"
+                )}
+              </Button>
+            </div>
+          </form>
         </div>
-        <div className="grid gap-2">
-          <Label htmlFor="expireDate">Expiration Date</Label>
-          <Input
-            type="date"
-            id="expireDate"
-            name="expireDate"
-            value={jobData.expireDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="grid gap-2">
-          <Label htmlFor="urgency">Urgency</Label>
-          <select
-            id="urgency"
-            name="urgency"
-            value={jobData.urgency}
-            onChange={handleChange}
-            className="input"
-            required
-          >
-            <option value="urgent">Urgent</option>
-            <option value="normal">Normal</option>
-          </select>
-        </div>
-        <div className="grid gap-2">
-          <Label htmlFor="numberOfPosition">Number of Positions</Label>
-          <Input
-            type="number"
-            id="numberOfPosition"
-            name="numberOfPosition"
-            value={jobData.numberOfPosition}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="col-span-1 lg:col-span-2 grid gap-2">
-          <Label htmlFor="description">Job Description</Label>
-          <Textarea
-            id="description"
-            name="description"
-            value={jobData.description}
-            onChange={handleChange}
-            placeholder="Describe the job in detail..."
-            required
-          />
-        </div>
-        <div className="col-span-1 lg:col-span-2 grid gap-2">
-          <Label htmlFor="requirements">Requirements</Label>
-          <Textarea
-            id="requirements"
-            name="requirements"
-            value={jobData.requirements}
-            onChange={handleChange}
-            placeholder="Enter requirements separated by commas"
-            required
-          />
-        </div>
-        <div className="col-span-1 lg:col-span-2">
-          <Button type="submit" className="">
-            {formSubmission ? (
-              <LoaderIcon className="animate-spin" />
-            ) : (
-              "Send Propusol"
-            )}
-          </Button>
-        </div>
-      </form>
+      </div>
     </div>
   );
 };
