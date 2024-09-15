@@ -83,7 +83,7 @@ const OurServices = () => {
               className="w-fit  px-6 rounded-lg bg-gray-50 shadow-lg relative z-10 bottom-64 h-28 text-center text-gray-600  right-3 lg:left-5"
             >
               <Image
-                src="/bblogo.png"
+                src="/bbLogo.png"
                 width={200}
                 height={200}
                 alt="Bhandari Brothers"
