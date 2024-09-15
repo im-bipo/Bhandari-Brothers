@@ -36,20 +36,14 @@ export const getJobById = async (jobId: string) => {
 };
 
 export const createJob = async (data: JobTypes) => {
-  const res = await databases.createDocument(
-    DATABASE_ID,
-    JOBS_COLLECTION_ID,
-    ID.unique(),
-    {
-      jobTitle: data.jobTitle,
-      companyName: data.companyName,
-      expireDate: data.expireDate,
-      location: data.location,
-      workingHours: data.workingHours,
-      numberOfPosition: Number(data.numberOfPosition),
-      description: data.description,
-      requirements: data.requirements,
-    }
-  );
-  console.log(res);
+  await databases.createDocument(DATABASE_ID, JOBS_COLLECTION_ID, ID.unique(), {
+    jobTitle: data.jobTitle,
+    companyName: data.companyName,
+    expireDate: data.expireDate,
+    location: data.location,
+    workingHours: data.workingHours,
+    numberOfPosition: Number(data.numberOfPosition),
+    description: data.description,
+    requirements: data.requirements,
+  });
 };

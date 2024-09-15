@@ -5,6 +5,7 @@ import NavBar from "@/components/custom/NavBar";
 import Footer from "@/components/custom/Footer";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "@/components/ui/toaster";
+import TopBar from "@/components/custom/TopBar";
 
 const inter = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -38,8 +39,11 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <NextTopLoader showSpinner={false} color="red" />
-        <NavBar />
-        <main className="overflow-hidden pt-[72px]">{children}</main>
+        <nav className="bg-background/60 backdrop-blur-xl shadow-sm fixed z-[1000] w-full top-0">
+          <TopBar />
+          <NavBar />
+        </nav>
+        <main className="overflow-hidden pt-[105px]">{children}</main>
         <Toaster />
         <Footer />
       </body>

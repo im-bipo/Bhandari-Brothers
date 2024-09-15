@@ -7,7 +7,7 @@ const InfoCardHeader = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <h2
     ref={ref}
-    className={cn("text-2xl font-semibold mb-4 relative z-10", className)}
+    className={cn("text-4xl font-semibold mb-4 relative z-10 min-h-24", className)}
     {...props}
   >
     {children}

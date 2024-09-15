@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.serviceInofCard::after{
-content: 'd';
-position: relative;
-background-color: red;
-transform: rotate(40deg);
+.serviceInofCard::after {
+  content: "d";
+  position: relative;
+  background-color: red;
+  transform: rotate(40deg);
 }

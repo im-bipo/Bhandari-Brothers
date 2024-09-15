@@ -113,6 +113,10 @@ export const ourCertificates = [
     id: 3,
     image: "/images/certificates/certificate3.png",
   },
+  {
+    id: 4,
+    image: "/images/certificates/certificate4.png",
+  },
 ];
 
 export const services = [
@@ -176,7 +180,20 @@ export const services = [
     imgSrc: "/images/services/restaurant.jpeg",
     link:'/service/restaurant'
   },
+  {
+    header: "Educational Services",
+    description:
+      "At Bhandari Brothers Group, we believe education is key to success. Our educational services support individuals in achieving their academic and career goals, providing comprehensive resources and expert guidance.",
+    points: [
+      "Comprehensive Learning Programs: We offer structured courses and training tailored to different educational levels and career paths.",
+      "Expert Instructors: Our courses are led by experienced professionals, offering valuable insights and mentorship.",
+      "Flexible Learning Options: Both in-person and online learning options are available, making education accessible anytime, anywhere.",
+    ],
+    imgSrc: "/images/services/education.jpeg",
+    link:'/service/education'
+  },
 ];
+
 
 
 import { NotebookPen, Route, SquarePlus, Waypoints } from "lucide-react";

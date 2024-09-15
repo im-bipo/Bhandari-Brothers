@@ -33,7 +33,7 @@ const Jobs: React.FC<JobsParamsType> = async ({ searchParams }) => {
           <h2 className="lg: text-xl md:text-2xl lg:text-[2rem] font-semibold ">
             Start Your Job Hunt Now and Enjoy Curated Job Matches.
           </h2>
-          <SearchBar jobData={jobsData}/>
+          <SearchBar />
           <div className="line-clamp-1 lg: mb-8 px-2 ">
             Top Searches : Taxi Services, Graphic designing, Software Engineer,
             Delivery Service

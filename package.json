@@ -19,6 +19,7 @@
     "class-variance-authority": "^0.7.0",
     "cloudinary": "^2.4.0",
     "clsx": "^2.1.1",
+    "cmdk": "^1.0.0",
     "embla-carousel-auto-scroll": "^8.1.7",
     "embla-carousel-react": "^8.1.7",
     "framer-motion": "^11.5.4",

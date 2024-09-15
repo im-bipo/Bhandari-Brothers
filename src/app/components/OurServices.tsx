@@ -21,32 +21,38 @@ const OurServices = () => {
             professionalism and efficiency.
           </p>
           <ul className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <Link href="/service/recruitment">
-              <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-                Recruitment Services
-              </li>
-            </Link>
-            <Link href="/service/outsourcing">
-              <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-                Outsourcing Services
-              </li>
-            </Link>
-            <Link href="/service/taxi">
-              <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-                Taxi Services
-              </li>
-            </Link>
-            <Link href="/service/foodDelivery">
-              <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-                Food Delivery Services
-              </li>
-            </Link>
-            <Link href="/service/restaurant">
-              <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-                Restaurant Services
-              </li>
-            </Link>
-          </ul>
+  <Link href="/service/recruitment">
+    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
+      Recruitment Services
+    </li>
+  </Link>
+  <Link href="/service/outsourcing">
+    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
+      Outsourcing Services
+    </li>
+  </Link>
+  <Link href="/service/taxi">
+    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
+      Taxi Services
+    </li>
+  </Link>
+  <Link href="/service/foodDelivery">
+    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
+      Food Delivery Services
+    </li>
+  </Link>
+  <Link href="/service/restaurant">
+    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
+      Restaurant Services
+    </li>
+  </Link>
+  <Link href="/service/education">
+    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
+      Educational Services
+    </li>
+  </Link>
+</ul>
+
         </div>
 
         {/* right  */}
@@ -56,7 +62,7 @@ const OurServices = () => {
             width={300}
             height={300}
             alt="Service Image"
-            className="w-full object-top h-[30rem] object-cover rounded-md bg-gray-50 rounded-b-[0px] relative z-[2] shadow-lg"
+            className="w-full object-bottom h-[30rem] object-cover rounded-md bg-gray-50 rounded-b-[0px] relative z-[2] shadow-lg"
           />
           <div
             id="controls"
