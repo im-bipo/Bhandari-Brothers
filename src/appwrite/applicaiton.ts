@@ -1,7 +1,6 @@
 "use server";
 import { ID, Query } from "appwrite";
 import { RESUME_BUCKET_ID, storage } from "./config";
-import { sendMail } from "@/lib/mail";
 
 // Create a new job application
 export const newApplication = async (data: FormData) => {
