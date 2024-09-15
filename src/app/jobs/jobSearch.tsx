@@ -3,24 +3,19 @@ import { JobTypes } from "@/appwrite/jobs";
 import JobCard from "@/components/custom/JobCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import React from "react";
+import { useSearchParams } from "next/navigation";
+import React, { useEffect } from "react";
 type JobsSearchParamsType = {
-  searchParams: string;
   jobsData: JobTypes[];
 };
-const JobSearch: React.FC<JobsSearchParamsType> = ({
-  searchParams,
-  jobsData,
-}) => {
-  const [searchQuery, setSearchQuery] = React.useState<string>(
-    searchParams ?? ""
-  );
+const JobSearch: React.FC<JobsSearchParamsType> = ({ jobsData }) => {
+  const searchParams = useSearchParams();
+  const search = searchParams.get("q") || '';
+  const [searchQuery, setSearchQuery] = React.useState<string>("");
 
-  // Function to handle search input change
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (searchQuery === "" && event.target.value === " ") return false;
-    setSearchQuery(event.target.value);
-  };
+  useEffect(() => {
+    setSearchQuery(search as string);
+  }, [search]);
 
   // Filter jobs based on searchQuery
   const filteredJobs = jobsData.filter(
@@ -31,17 +26,7 @@ const JobSearch: React.FC<JobsSearchParamsType> = ({
 
   return (
     <div>
-      <div className="mb-4 flex flex-col md:flex-row justify-between md:items-center">
-        <div className="flex gap-2 md:w-1/2">
-          <Input
-            type="text"
-            placeholder="Search jobs..."
-            value={searchQuery}
-            onChange={handleSearchChange}
-            className="md:w-full"
-          />
-          <Button>Search</Button>
-        </div>
+      <div className="my-4 flex flex-col md:flex-row justify-between md:items-center">
         <div className="mt-4 md:mt-0 font-medium text-xl">
           {searchQuery.trim() !== "" &&
             `${filteredJobs.length} result${

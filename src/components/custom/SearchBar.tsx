@@ -4,9 +4,11 @@ import { Search } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { useRouter } from "next/navigation";
+import { Models } from "appwrite";
 
-const SearchBar = () => {
+const SearchBar = ({jobData}:{jobData : Models.Document[]}) => {
   const router = useRouter();
+  console.log(jobData)
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,10 +16,10 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="w-full max-w-[55rem] py-5">
+    <div className="w-full py-5">
       <form
         onSubmit={handleSearch}
-        className="border-foreground/20 rounded-md border-2 flex items-center mx-2 px-2 py-1 w"
+        className="border-foreground/20 rounded-md border-2 flex items-center px-2 py-1 w"
       >
         <Search className="w-8 h-8" />
         <Input
