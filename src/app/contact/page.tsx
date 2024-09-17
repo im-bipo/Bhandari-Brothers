@@ -6,8 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Globe2Icon, MailIcon, MapIcon, PhoneCallIcon } from "lucide-react";
+import { toast } from "@/components/hooks/use-toast";
 import Image from "next/image";
 import Link from "next/link";
+import { sendMail } from "@/lib/mail";
 
 type formDataType = {
   name: string;
@@ -24,6 +26,19 @@ const ContactUs: React.FC = () => {
   } = useForm<formDataType>();
 
   const onSubmit = (data: formDataType) => {
+    sendMail({
+      subject: "Contact Us",
+      html: `<ul>
+      <li>Name : ${data.name}</li>
+      <li>Email : ${data.email}</li>
+      <li>Message : ${data.message}</li>
+      </ul>`,
+    });
+    toast({
+      variant: "sucessfull",
+      title: "Form submitted",
+      description: "We'll get back to you soon!",
+    });
     reset();
   };
 

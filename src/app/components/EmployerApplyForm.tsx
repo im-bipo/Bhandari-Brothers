@@ -24,7 +24,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
+import { sendMail } from "@/lib/mail";
 
 const FormSchema = z.object({
   companyName: z.string().min(1, { message: "Company Name is required" }),
@@ -51,9 +51,21 @@ export function EmployerApplyForm({
   const onSubmit = async (data: Inputs) => {
     setSubmitError(null);
     try {
-      console.log("Submitted data: ", data);
+      sendMail({
+        subject: "Employer Application",
+        html: `<ul>
+        <li>Companey Email : ${data.email}</li>
+        <li>Companey Name : ${data.companyName}</li>
+        <li>Contact Number : ${data.contactNumber}</li>
+        <li>Website : ${data.website}</li>
+        <li>Position : ${data.position}</li>
+        <li>Conuntry : ${data.country}</li>
+        <li>Note : ${data.note}</li>
+        </ul>`,
+      });
       setOpen(false);
       toast({
+        variant: "sucessfull",
         title: "Form submitted",
         description: "We'll get back to you soon!",
       });
@@ -64,7 +76,10 @@ export function EmployerApplyForm({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-1 bottom-2">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-1 bottom-2"
+      >
         {/* Company Name */}
         <FormField
           control={form.control}
@@ -194,7 +209,9 @@ export function EmployerApplyForm({
         {submitError && <div className="text-red-500">{submitError}</div>}
 
         {/* Submit Button */}
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="w-full lg:w-[unset]">
+          Submit
+        </Button>
       </form>
     </Form>
   );
