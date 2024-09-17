@@ -39,7 +39,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <NextTopLoader showSpinner={false} color="red" />
-        <nav className="bg-background/60 backdrop-blur-xl shadow-sm fixed z-[1000] w-full top-0">
+        <nav className="bg-background/60 backdrop-blur-xl shadow-sm fixed z-50 w-full top-0">
           <TopBar />
           <NavBar />
         </nav>

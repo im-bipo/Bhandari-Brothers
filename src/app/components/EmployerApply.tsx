@@ -15,29 +15,33 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import useMediaQuery from "@/components/hooks/MediaQuery";
-import JobApplicationForm from "./JobApplicationForm";
+import { EmployerApplyForm } from "./EmployerApplyForm";
 
-const ApplyJob = ({ jobId }: { jobId: string }) => {
+const EmployerApply = () => {
   const device = useMediaQuery();
   const [open, setOpen] = useState(false);
 
   return device === "desktop" ? (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={setOpen} >
       <DialogTrigger asChild>
-        <Button>Apply Now</Button>
+        <Button className="bg-white hover:bg-red-700 hover:text-white text-primary">
+          Apply Now
+        </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <JobApplicationForm jobId={jobId} setOpen={setOpen} />
+      <DialogContent className="z-[100]">
+        <EmployerApplyForm setOpen={setOpen} />
         <DialogDescription></DialogDescription>
       </DialogContent>
     </Dialog>
   ) : (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button>Apply Now</Button>
+        <Button className="bg-white hover:bg-red-700 hover:text-white text-primary">
+          Apply Now
+        </Button>
       </DrawerTrigger>
-      <DrawerContent>
-        <JobApplicationForm jobId={jobId} setOpen={setOpen} className="px-4" />
+      <DrawerContent className="px-4">
+        <EmployerApplyForm setOpen={setOpen} />
         <DialogDescription></DialogDescription>
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
@@ -49,4 +53,5 @@ const ApplyJob = ({ jobId }: { jobId: string }) => {
   );
 };
 
-export default ApplyJob;
+export default EmployerApply;
+
