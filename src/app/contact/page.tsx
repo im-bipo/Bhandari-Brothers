@@ -29,8 +29,58 @@ const ContactUs: React.FC = () => {
 
   return (
     <div className="container mx-auto py-10 px-4 lg:px-8">
-      <h2 className="text-3xl font-semibold text-primary mb-6">Contact Us</h2>
-      <OfficeLocation />
+      <h2 className="text-3xl font-semibold text-primary mb-6">
+        Our office locations
+      </h2>
+
+      {/* our office location  */}
+      <HeadOffice />
+      <section className="grid gap-4 md:grid-cols-2 rounded-lg items-center">
+        <OfficeLocation
+          location="Our Bulgaria Office"
+          mail="info@bhandaribrothers.com"
+          phone="+3567787789, +35627136935"
+          address="Burgas, Municipality: Burgas City: Burgas, p.k. 8000 BIvd.
+                Maragidik No. 19, fl. 2, apartment office 1"
+          website="/"
+        />
+        <OfficeLocation
+          location="Our Greece Office"
+          mail="info@bhandaribrothers.com"
+          phone="+3567787789, +35627136935"
+          address="34 Parasiou, Athens Centre 104 40, Greece"
+          website="/"
+        />
+      </section>
+
+      {/* find Out more */}
+      <h2 className="text-3xl font-semibold text-primary my-4 border-t pt-4">
+        Find Our More
+      </h2>
+      <section className="grid gap-4 md:grid-cols-2 rounded-lg items-center">
+        <OfficeLocation
+          location="Global Tri Force Manpower Solution"
+          mail="education@globaltriforce.com"
+          phone="+3567787789, +35627136935"
+          address="Shantinagar Marga, Kathmandu"
+          website="https://www.globaltriforce.com"
+        />
+        <OfficeLocation
+          location="Global Tri Force Educaiton Consultancy"
+          mail="education@globaltriforce.com"
+          phone="+3567787789, +35627136935"
+          address="Shantinagar Marga, Kathmandu"
+          website="https://www.globaltriforce.com"
+        />
+        <OfficeLocation
+          location="Tri Force Tour and Travel Agency"
+          mail="travel@globaltriforce.com"
+          phone="+3567787789, +35627136935"
+          address="Shantinagar Marga, Kathmandu"
+          website="https://www.globaltriforce.com"
+        />
+      </section>
+
       <section className="grid grid-cols-1 mt-10 lg:grid-cols-2 gap-12">
         <div>
           <p className="text-lg leading-relaxed mb-4 text-gray-700">
@@ -121,159 +171,92 @@ const ContactUs: React.FC = () => {
 
 export default ContactUs;
 
-const OfficeLocation = () => {
+const OfficeLocation = ({
+  location,
+  mail,
+  phone,
+  website,
+  address,
+}: {
+  location: string;
+  mail: string;
+  phone: string;
+  website: string;
+  address: string;
+}) => {
   return (
     <>
-      <div className="container grid gap-4 my-4 md:grid-cols-2 bg-gray-100 p-6 rounded-lg items-center space-x-6">
-        <div className="flex-1">
-          <h1 className="text-3xl font-bold  mb-4">
-            Bhandari Brothers Group Headquarters{" "}
-          </h1>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2 text-gray-700">
-              <MailIcon className="text-xl text-primary" />
-              <p className="text-lg">info@bhandaribrothers.com</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <PhoneCallIcon className="text-xl text-primary" />
-              <p className="text-lg">+3567787789, +35627136935</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <Globe2Icon className="text-xl text-primary" />
-              <Link href="/" className="text-lg text-blue-600 hover:underline">
-                Visit our website
-              </Link>
-            </div>
-            <div className="flex space-x-2 text-gray-700">
-              <MapIcon className="text-lg text-primary" />
-              <p className="text-lg">
-                Level 2, Hall B DL Business Center, Triq L-Irham C/W Triq
-                Siimpson Marsa Malta
-              </p>
-            </div>
+      <div className="flex-1 p-4 bg-gray-100 h-full">
+        <h1 className="text-2xl font-semibold  mb-4">{location}</h1>
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2 text-gray-700">
+            <MailIcon className="text-xl text-primary" />
+            <p className="text-lg">{mail}</p>
           </div>
-        </div>
-        {/* Image  */}
-        <div className="">
-          <Image
-            width={1000}
-            height={1000}
-            src="/images/md/Prakash Bhandari.jpg"
-            alt="Office Photo"
-            className="w-full h-[20rem] object-cover rounded-lg shadow-md"
-          />
+          <div className="flex items-center space-x-2 text-gray-700">
+            <PhoneCallIcon className="text-xl text-primary" />
+            <p className="text-lg">{phone}</p>
+          </div>
+          <div className="flex items-center space-x-2 text-gray-700">
+            <Globe2Icon className="text-xl text-primary" />
+            <Link
+              href={website}
+              className="text-lg text-blue-600 hover:underline"
+            >
+              Visit our website
+            </Link>
+          </div>
+          <div className="flex space-x-2 text-gray-700">
+            <MapIcon className="text-lg text-primary" />
+            <p className="text-lg">{address}</p>
+          </div>
         </div>
       </div>
-
-      {/* other locaiton */}
-
-      <section className="grid gap-4 md:grid-cols-2 rounded-lg items-center">
-        <article className="flex-1 p-4 bg-gray-100 ">
-          <h1 className="text-3xl font-bold  mb-4">Our Bulgaria Office</h1>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2 text-gray-700">
-              <MailIcon className="text-xl text-primary" />
-              <p className="text-lg">info@bhandaribrothers.com</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <PhoneCallIcon className="text-xl text-primary" />
-              <p className="text-lg">+3567787789, +35627136935</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <Globe2Icon className="text-xl text-primary" />
-              <Link href="/" className="text-lg text-blue-600 hover:underline">
-                Visit our website
-              </Link>
-            </div>
-            <div className="flex space-x-2 text-gray-700">
-              <MapIcon className="text-2xl text-primary" />
-              <p className="text-lg">
-                Burgas, Municipality: Burgas City: Burgas, p.k. 8000 BIvd.
-                Maragidik No. 19, fl. 2, apartment office 1
-              </p>
-            </div>
-          </div>
-        </article>
-        {/* greece */}
-        <article className="flex-1 p-4 bg-gray-100 h-full">
-          <h1 className="text-3xl font-bold  mb-4">Our Greece Office</h1>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2 text-gray-700">
-              <MailIcon className="text-xl text-primary" />
-              <p className="text-lg">info@bhandaribrothers.com</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <PhoneCallIcon className="text-xl text-primary" />
-              <p className="text-lg">+3567787789, +35627136935</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <Globe2Icon className="text-xl text-primary" />
-              <Link href="/" className="text-lg text-blue-600 hover:underline">
-                Visit our website
-              </Link>
-            </div>
-            <div className="flex space-x-2 text-gray-700">
-              <MapIcon className="text-lg text-primary" />
-              <p className="text-lg">
-                34 Parasiou, Athens Centre 104 40, Greece
-              </p>
-            </div>
-          </div>
-        </article>
-
-        {/* Triforce Educaiton Consultancy */}
-        <article className="flex-1 p-4 bg-gray-100 h-full">
-          <h1 className="text-3xl font-bold  mb-4">
-            Triforce Educaiton Consultancy
-          </h1>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2 text-gray-700">
-              <MailIcon className="text-xl text-primary" />
-              <p className="text-lg">education@globaltriforce.com</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <PhoneCallIcon className="text-xl text-primary" />
-              <p className="text-lg">+3567787789, +35627136935</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <Globe2Icon className="text-xl text-primary" />
-              <Link href="https://www.globaltriforce.com" className="text-lg text-blue-600 hover:underline">
-                Visit our website
-              </Link>
-            </div>
-            <div className="flex space-x-2 text-gray-700">
-              <MapIcon className="text-lg text-primary" />
-              <p className="text-lg">Shantinagar Marga, Kathmandu.</p>
-            </div>
-          </div>
-        </article>
-        {/* Triforce Tour and Travel Agency */}
-        <article className="flex-1 p-4 bg-gray-100 h-full">
-          <h1 className="text-3xl font-bold  mb-4">
-          Triforce Tour and Travel Agency 
-          </h1>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2 text-gray-700">
-              <MailIcon className="text-xl text-primary" />
-              <p className="text-lg">travel@globaltriforce.com</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <PhoneCallIcon className="text-xl text-primary" />
-              <p className="text-lg">+3567787789, +35627136935</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <Globe2Icon className="text-xl text-primary" />
-              <Link href="https://www.globaltriforce.com" className="text-lg text-blue-600 hover:underline">
-                Visit our website
-              </Link>
-            </div>
-            <div className="flex space-x-2 text-gray-700">
-              <MapIcon className="text-lg text-primary" />
-              <p className="text-lg">Shantinagar Marga, Kathmandu.</p>
-            </div>
-          </div>
-        </article>
-      </section>
     </>
+  );
+};
+
+const HeadOffice = () => {
+  return (
+    <section className="container grid gap-4 my-4 md:grid-cols-2 bg-gray-100 p-6 rounded-lg items-center space-x-6">
+      <div className="flex-1">
+        <h1 className="text-3xl font-bold  mb-4">
+          Bhandari Brothers Group Headquarters{" "}
+        </h1>
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2 text-gray-700">
+            <MailIcon className="text-xl text-primary" />
+            <p className="text-lg">info@bhandaribrothers.com</p>
+          </div>
+          <div className="flex items-center space-x-2 text-gray-700">
+            <PhoneCallIcon className="text-xl text-primary" />
+            <p className="text-lg">+3567787789, +35627136935</p>
+          </div>
+          <div className="flex items-center space-x-2 text-gray-700">
+            <Globe2Icon className="text-xl text-primary" />
+            <Link href="/" className="text-lg text-blue-600 hover:underline">
+              Visit our website
+            </Link>
+          </div>
+          <div className="flex space-x-2 text-gray-700">
+            <MapIcon className="text-lg text-primary" />
+            <p className="text-lg">
+              Level 2, Hall B DL Business Center, Triq L-Irham C/W Triq Siimpson
+              Marsa Malta
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Image  */}
+      <div className="">
+        <Image
+          width={1000}
+          height={1000}
+          src="/images/md/Prakash Bhandari.jpg"
+          alt="Office Photo"
+          className="w-full h-[20rem] object-cover rounded-lg shadow-md"
+        />
+      </div>
+    </section>
   );
 };

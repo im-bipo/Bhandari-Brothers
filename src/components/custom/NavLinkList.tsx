@@ -52,6 +52,9 @@ const NavList = ({ toggleMenu }: { toggleMenu?: () => void | boolean }) => {
       <NavLink href="/about-us" {...(toggleMenu && { onClick: toggleMenu })}>
         About Us
       </NavLink>
+      <NavLink href="/projects" {...(toggleMenu && { onClick: toggleMenu })}>
+        Projects
+      </NavLink>
       <NavLink href="/contact" {...(toggleMenu && { onClick: toggleMenu })}>
         Contact
       </NavLink>

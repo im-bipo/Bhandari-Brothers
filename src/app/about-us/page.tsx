@@ -1,47 +1,43 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import React from "react";
 import OurCertifications from "../components/OurCertifications";
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto py-12 px-4 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left Column - Intro and Mission */}
-        <div>
-          <div className="relative mb-8">
-            <Image
+    <div className="container w-full">
+      <div className="">
+        {/* Section Container */}
+        <div className="grid  bg-gray-50 grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="polygon-reverse">
+            <img
               alt="Bhandari Brothers"
               src="/images/md/Prakash Bhandari.jpg"
-              width={600}
-              height={400}
               className="w-full rounded-md h-[30rem] object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-20 rounded-md"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-500 to-transparent opacity-40 rounded-md"></div>
           </div>
-        </div>
 
-        {/* Right Column - Core Values and Call to Action */}
-        <div className="space-y-6">
-          <p className="text-lg leading-relaxed mb-6 text-gray-700">
-            Welcome to <span className="font-semibold">Bhandari Brothers</span>!
-            We are a leading company in our industry, committed to providing
-            high-quality services and products. Our mission is to create value
-            for our clients through innovation, integrity, and excellence. We
-            are dedicated to helping our customers achieve their goals with
-            unwavering support.
-          </p>
-          <p className="text-lg leading-relaxed mb-6 text-gray-700">
-            Since our founding in <span className="font-semibold">2019</span>,
-            Bhandari Brothers has grown to become a trusted name in the market.
-            Our team of dedicated professionals is focused on exceeding client
-            expectations by fostering continuous improvement.
-          </p>
-          <p className="text-lg leading-relaxed mb-6 text-gray-700">
-            At Bhandari Brothers, we believe in the power of collaboration and
-            forward-thinking strategies. We remain committed to providing
-            solutions that align with our clients unique needs, while
-            maintaining the highest standards of quality.
-          </p>
+          {/* Right Column - Content with Core Values */}
+          <div className="flex flex-col justify-center space-y-6 px-5">
+            <p className="text-primary font-semibold text-md">
+              Welcome to <span className="font-bold">Bhandari Brothers</span>!
+            </p>
+            <h1 className="text-3xl font-bold text-gray-900">
+              Creating Value with Integrity & Excellence
+            </h1>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Since our founding in <span className="font-semibold">2019</span>,
+              Bhandari Brothers has grown to become a trusted name in the
+              market. Our team of professionals is focused on exceeding
+              expectations and fostering continuous improvement.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We believe in collaboration and forward-thinking strategies. Our
+              solutions are tailored to meet the unique needs of our clients,
+              while maintaining the highest standards of quality.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -151,46 +147,40 @@ const AboutUs = () => {
       </div>
 
       {/* Our Tie-up */}
-      <div className="bg-white p-6 rounded-lg shadow-md">
+      <div className="bg-white p-6 rounded-lg border-t-2 mt-6">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">
-          Our Tie-Up
+          Our Companies
         </h2>
-        <ul className="list-disc pl-6 space-y-2 text-gray-700">
-          <li className="flex items-center">
-            <svg
-              className="w-5 h-5 text-primary mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            Europe Staff Limited
-          </li>
-          <li className="flex items-center">
-            <svg
-              className="w-5 h-5 text-primary mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            BPR Brose Ltd
-          </li>
-        </ul>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-col items-center space-x-4 shadow-sm hover:bg-slate-50 duration-150 p-10">
+            <Image
+              height={300}
+              width={300}
+              src="/images/md/Europe staff ltd.png"
+              alt="Europe Staff Limited Logo"
+              className="w-full h-20 object-contain"
+            />
+            <div>
+              <h3 className="text-gray-700 text-xl font-medium">
+                Europe Staff Limited
+              </h3>
+            </div>
+          </div>
+          <div className="flex flex-col items-center space-x-4 shadow-sm hover:bg-slate-50 duration-150 p-10">
+            <Image
+              height={300}
+              width={300}
+              src="/images/md/BPR-Cleaning.png"
+              alt="BPR Brose Ltd Logo"
+              className="w-full h-20 object-contain"
+            />
+            <div>
+              <h3 className="text-gray-700 text-xl font-medium">
+                BPR Cleaning
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="text-center mt-6">

@@ -43,7 +43,7 @@ export default function RootLayout({
           <TopBar />
           <NavBar />
         </nav>
-        <main className="overflow-hidden pt-[105px]">{children}</main>
+        <main className="overflow-hidden pt-[72px] md:pt-[105px]">{children}</main>
         <Toaster />
         <Footer />
       </body>
