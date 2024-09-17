@@ -136,6 +136,20 @@ const Footer = () => {
               className="object-cover bg-white w-20 h-20 rounded"
             />
             </Link>
+            <Image
+              width={200}
+              height={200}
+              src="/images/md/Europe staff ltd.png"
+              alt="Description 4"
+              className="object-contain bg-white w-20 h-20 rounded"
+            />
+            <Image
+              width={200}
+              height={200}
+              src="/images/md/BPR-Cleaning.png"
+              alt="Description 4"
+              className="object-contain bg-white w-20 h-20 rounded"
+            />
           </div>
           </div>
         </div>
