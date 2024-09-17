@@ -138,18 +138,6 @@ export const services = [
     link:'/service/outsourcing'
   },
   {
-    header: "Taxi Services",
-    description:
-      "Get where you need to be with our dependable taxi services. Whether for daily commuting or special occasions, our fleet of well-maintained vehicles and professional drivers ensure a comfortable and timely ride, every time.",
-    points: [
-      "Reliable Transportation: Our taxi fleet offers safe and comfortable transportation options for individuals and businesses.",
-      "Convenient Booking: Book your taxi rides easily through our online platform or by phone.",
-      "Professional Drivers: Our drivers are courteous, knowledgeable, and committed to providing excellent service.",
-    ],
-    imgSrc: "/images/services/taxi.jpeg",
-    link:'/service/taxi'
-  },
-  {
     header: "Food Delivery Services",
     description:
       "Craving something delicious? Our food delivery service brings your favorite meals right to your doorstep. With a wide selection of restaurants and cuisines, we make sure you enjoy fresh and tasty food whenever you want it.",
@@ -172,14 +160,30 @@ export const services = [
   {
     header: "Educational Services",
     description:
-      "At Bhandari Brothers Group, we believe education is key to success. Our educational services support individuals in achieving their academic and career goals, providing comprehensive resources and expert guidance.",
-    points: [
-      "Comprehensive Learning Programs: We offer structured courses and training tailored to different educational levels and career paths.",
-      "Expert Instructors: Our courses are led by experienced professionals, offering valuable insights and mentorship.",
-      "Flexible Learning Options: Both in-person and online learning options are available, making education accessible anytime, anywhere.",
-    ],
+      "We partner with various prestigious colleges across Europe, offering consultancy-based services to help students achieve their academic and career aspirations. At Bhandari Brothers Group, we believe that education is the key to success, and our services provide the guidance and resources needed to support your journey.",
+    points: [],
     imgSrc: "/images/services/education.jpeg",
     link:'/service/education'
+  },
+  {
+    header: "Cleaning Services",
+    description:
+      "Offering a wide range of cleaning services across the EU, Bhandari Brothers Group ensures a spotless environment for every space. From domestic to commercial settings, our comprehensive cleaning solutions are tailored to meet all your needs.",
+    points: [],
+    imgSrc: "/images/services/cleaning.jpeg",
+    link:'/service/cleaning'
+  },
+  {
+    header: "Taxi Services",
+    description:
+      "Get where you need to be with our dependable taxi services. Whether for daily commuting or special occasions, our fleet of well-maintained vehicles and professional drivers ensure a comfortable and timely ride, every time.",
+    points: [
+      "Reliable Transportation: Our taxi fleet offers safe and comfortable transportation options for individuals and businesses.",
+      "Convenient Booking: Book your taxi rides easily through our online platform or by phone.",
+      "Professional Drivers: Our drivers are courteous, knowledgeable, and committed to providing excellent service.",
+    ],
+    imgSrc: "/images/services/taxi.jpeg",
+    link:'/service/taxi'
   },
   {
     header: "Visa Services",

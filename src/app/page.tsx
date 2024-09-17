@@ -31,7 +31,7 @@ const App = () => {
 
       </main> */}
       <ServiceCard />
-      <StartHire />
+      {/* <StartHire /> */}
       <WhyChooseUs />
       <CompanyTestimonials />
       <OurCertifications />

@@ -29,18 +29,16 @@ const Projects = () => {
       {/* project sections */}
       <div className="py-10 bg-slate-50">
         <section className="container">
-          
-        <div className="font-semibold text-2xl">Projects</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+          <div className="font-semibold text-2xl">Projects</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg">
+            <div className="bg-white p-6 pb-0 rounded-lg relative">
               <img
                 src="/images/md/College and Business School.png"
                 alt=" Bhandari Brothers College and Business School"
                 className="w-full object-cover mb-4 rounded-md"
               />
               <h2 className="text-2xl font-semibold mb-4">
-                Bhandari Brothers College and Business School
+                BB College and Business School
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed line-clamp-4">
                 We offers a modern, industry-focused education, combining
@@ -51,18 +49,19 @@ const Projects = () => {
                 innovation and business leadership.
               </p>
               <Button className="my-2">Read More</Button>
+              <div className="absolute top-10 px-2 py-1 rounded-full bg-secondary text-white right-10 w-fit">
+                Upcomming
+              </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg">
-            <img
+            <div className="bg-white p-6 pb-0 rounded-lg relative">
+              <img
                 src="/images/md/INN Hotel.jpg"
                 alt="Bhandari Brothers INN Hotel"
                 className="w-full object-cover mb-4 rounded-md"
               />
-              <h2 className="text-2xl font-semibold mb-4">
-                Bhandari Brothers INN Hotel
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed line-clamp-5">
+              <h2 className="text-2xl font-semibold mb-4">BB INN Hotel</h2>
+              <p className="text-lg text-gray-700 leading-relaxed line-clamp-4">
                 We offers luxurious accommodations for business and leisure
                 travelers. With modern amenities, elegant rooms, and
                 personalized service, guests enjoy a relaxing and memorable
@@ -70,8 +69,11 @@ const Projects = () => {
                 of comfort and sophistication for a unique hospitality
                 experience.
               </p>
-              
+
               <Button className="my-2">Read More</Button>
+              <div className="absolute top-10 px-2 py-1 rounded-full bg-secondary text-white right-10 w-fit">
+                Upcomming
+              </div>
             </div>
           </div>
         </section>

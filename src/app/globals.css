@@ -9,9 +9,12 @@
   transform: rotate(40deg);
 }
 
-.polygon {
-  clip-path: polygon(0% 100%, 20% 0%, 100% 0%, 100% 100%);
-}
-.polygon-reverse {
-  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 90% 100%);
+@media (min-width: 768px){ 
+  .polygon {
+    clip-path: polygon(0% 100%, 20% 0%, 100% 0%, 100% 100%);
+  }
+  .polygon-reverse {
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 90% 100%);
+  }
+  
 }

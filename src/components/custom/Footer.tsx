@@ -127,6 +127,15 @@ const Footer = () => {
               className="object-cover bg-white w-20 h-20 rounded"
             />
             </Link>
+            <Link href='https://www.globaltriforce.com'>
+            <Image
+              width={200}
+              height={200}
+              src="/images/md/TRI_Force Human Resources.png"
+              alt="Description 4"
+              className="object-cover bg-white w-20 h-20 rounded"
+            />
+            </Link>
           </div>
           </div>
         </div>
