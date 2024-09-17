@@ -29,7 +29,6 @@ export async function sendMail({
 }) {
   try {
     const isVerified = await transporter.verify();
-    console.log("Transporter Verified:", isVerified);
   } catch (error) {
     console.error("Error during transporter verification", error);
     return;

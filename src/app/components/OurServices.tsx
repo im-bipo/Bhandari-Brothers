@@ -21,38 +21,14 @@ const OurServices = () => {
             professionalism and efficiency.
           </p>
           <ul className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-  <Link href="/service/recruitment">
-    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-      Recruitment Services
-    </li>
-  </Link>
-  <Link href="/service/outsourcing">
-    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-      Outsourcing Services
-    </li>
-  </Link>
-  <Link href="/service/taxi">
-    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-      Taxi Services
-    </li>
-  </Link>
-  <Link href="/service/foodDelivery">
-    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-      Food Delivery Services
-    </li>
-  </Link>
-  <Link href="/service/restaurant">
-    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-      Restaurant Services
-    </li>
-  </Link>
-  <Link href="/service/education">
-    <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-      Educational Services
-    </li>
-  </Link>
-</ul>
-
+            {services.map((service, index) => (
+              <Link href={service.link} key={index}>
+                <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
+                  {service.header}
+                </li>
+              </Link>
+            ))}
+          </ul>
         </div>
 
         {/* right  */}
@@ -69,9 +45,7 @@ const OurServices = () => {
             className=" flex items-center p-5 bg-gray-50 h-24 rounded-b-[25px] relative z-[2] shadow-lg"
           >
             <div className="pl-3">
-              <h6 className="font-medium text-primary">
-              Prakash Bhandari
-              </h6>
+              <h6 className="font-medium text-primary">Prakash Bhandari</h6>
               <p className="text-gray-400">CEO - Bhandari Brothers</p>
             </div>
           </div>

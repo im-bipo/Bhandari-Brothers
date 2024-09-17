@@ -1,61 +1,54 @@
 export const happyEmployee = [
   {
-    msg: "The service provided was exceptional, meeting all our expectations. Highly recommend for professional and efficient results.",
-    name: "Alex Johnson",
-    position: "Project Manager",
-    rating: 4,
+    msg: "Thanks to Bhandari Brothers Group, I secured a job as a taxi driver and I couldn't be happier. The entire process was smooth, and I feel supported in my role every day.",
+    name: "Parash Thapa Chhetri",
+    position: "Taxi Driver",
     image: "/images/happyemployee/employee1.png",
   },
   {
-    msg: "Outstanding experience! The team was highly professional and delivered top-notch work on time.",
-    name: "Emily Davis",
-    position: "Marketing Specialist",
-    rating: 4,
+    msg: "I am grateful to Bhandari Brothers Group for helping me find a job as a taxi driver. The work environment is fantastic, and the opportunity has truly changed my life.",
+    name: "Sanjok Bharati",
+    position: "Taxi Driver",
     image: "/images/happyemployee/employee2.png",
   },
   {
-    msg: "Their attention to detail and commitment to quality is impressive. We are extremely satisfied with the outcome.",
-    name: "Michael Brown",
-    position: "CEO",
-    rating: 4,
+    msg: "Bhandari Brothers Group connected me with my current job as a food delivery personnel, and I couldn't be more satisfied. Their support and professionalism made everything easy.",
+    name: "Yubraj Khadka",
+    position: "Food Delivery",
     image: "/images/happyemployee/employee3.png",
   },
   {
-    msg: "Excellent service from start to finish. The project was completed ahead of schedule and exceeded our expectations.",
-    name: "Sarah Wilson",
-    position: "Operations Manager",
-    rating: 4,
+    msg: "I found my job as a cleaner through Bhandari Brothers Group, and it has been a wonderful experience. The job suits my skills perfectly, and I’m really happy with the opportunity.",
+    name: "Parshuram KC",
+    position: "Cleaner",
     image: "/images/happyemployee/employee4.png",
   },
   {
-    msg: "Highly skilled team with great communication. They understood our needs and delivered outstanding results.",
-    name: "David Lee",
-    position: "Product Manager",
-    rating: 4,
+    msg: "Getting my food delivery job through Bhandari Brothers Group was the best decision. I’m happy with the flexibility and the work culture they’ve introduced me to.",
+    name: "Arjun",
+    position: "Food Delivery",
     image: "/images/happyemployee/employee5.png",
   },
   {
-    msg: "Professional and efficient. They delivered high-quality work that perfectly met our requirements.",
-    name: "Jessica Taylor",
-    position: "HR Director",
-    rating: 4,
+    msg: "Thanks to Bhandari Brothers Group, I found my current role as a fish farmer. The job is fulfilling, and I appreciate the guidance they provided during the hiring process.",
+    name: "Gyan Bahadur Reshmi",
+    position: "Fish Farmer",
     image: "/images/happyemployee/employee6.png",
   },
   {
-    msg: "Exceptional service! The team was responsive, knowledgeable, and produced excellent work.",
-    name: "James Anderson",
-    position: "IT Director",
-    rating: 4,
+    msg: "I’m extremely thankful to Bhandari Brothers Group for helping me secure a cleaner job. Their assistance made the entire process stress-free, and I’m enjoying my work.",
+    name: "Piyush Raj Buddhacharya",
+    position: "Cleaner",
     image: "/images/happyemployee/employee7.png",
   },
   {
-    msg: "Great collaboration and outstanding results. The project was a huge success thanks to their expertise.",
-    name: "Laura Martinez",
-    position: "Sales Manager",
-    rating: 4,
+    msg: "I’m very happy with my housekeeping job, all thanks to Bhandari Brothers Group. They helped me find a role that matches my skills perfectly, and the work environment is great.",
+    name: "Pratima",
+    position: "House Keeping",
     image: "/images/happyemployee/employee8.png",
   },
 ];
+
 
 export const happyClients = [
   {
@@ -171,12 +164,8 @@ export const services = [
   {
     header: "Restaurant Services",
     description:
-      "Experience culinary excellence at our restaurants. We offer a variety of dining options that cater to different tastes and preferences. Whether you're looking for a casual meal or a fine dining experience, our restaurants provide the perfect setting.",
-    points: [
-      "Dining Experience: Indulge in delectable dishes at our restaurant, featuring a diverse menu to suit all tastes.",
-      "Comfortable Ambiance: Enjoy a relaxing and inviting atmosphere.",
-      "Exceptional Service: Our friendly staff is dedicated to providing you with an unforgettable dining experience.",
-    ],
+      `Mr. Tiramisu - Authentic Italian Cuisine by Bhandari Brothers Group Experience the rich flavors of Italy at Mr. Tiramisu. Operated by Bhandari Brothers Group, we offer a diverse menu of classic Italian dishes, from handmade pastas to delectable desserts, catering to all tastes.`,
+    points: [],
     imgSrc: "/images/services/restaurant.jpeg",
     link:'/service/restaurant'
   },
@@ -191,6 +180,14 @@ export const services = [
     ],
     imgSrc: "/images/services/education.jpeg",
     link:'/service/education'
+  },
+  {
+    header: "Visa Services",
+    description:
+      "Embark on your international journey with ease through our comprehensive visa services. Whether you're seeking a work permit, a student visa, family reunification, or a business visa, we offer tailored solutions to meet your unique needs.",
+    points: [],
+    imgSrc: "/images/services/visa.jpeg",
+    link:'/service/visa'
   },
 ];
 

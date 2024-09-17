@@ -75,22 +75,22 @@ const ContactUs: React.FC = () => {
       <section className="grid gap-4 md:grid-cols-2 rounded-lg items-center">
         <OfficeLocation
           location="Global Tri Force Manpower Solution"
-          mail="education@globaltriforce.com"
-          phone="+3567787789, +35627136935"
+          mail="info@globaltriforce.com"
+          phone="+977-9767821051, +977-9767821052"
           address="Shantinagar Marga, Kathmandu"
           website="https://www.globaltriforce.com"
         />
         <OfficeLocation
           location="Global Tri Force Educaiton Consultancy"
           mail="education@globaltriforce.com"
-          phone="+3567787789, +35627136935"
+          phone="+977-9767821051, +977-9767821052"
           address="Shantinagar Marga, Kathmandu"
           website="https://www.globaltriforce.com"
         />
         <OfficeLocation
           location="Tri Force Tour and Travel Agency"
           mail="travel@globaltriforce.com"
-          phone="+3567787789, +35627136935"
+          phone="+977-9767821051, +977-9767821052"
           address="Shantinagar Marga, Kathmandu"
           website="https://www.globaltriforce.com"
         />
