@@ -146,6 +146,75 @@ const AboutUs = () => {
         </div>
       </div>
 
+      <div className="border-t-2">
+        <div className="grid lg:grid-cols-2 text-slate-700 py-6">
+          {/* left */}
+          <div className="space-y-2 pb-4">
+            <h2 className="text-primary font-medium text-lg">
+              Welcome to Bhandari Brothers
+            </h2>
+            <p>
+              Since our inception in 2019, we have been committed to providing
+              the right person for the right job through our recruitment
+              services. Initially operating as Europe Staff Limited, we set out
+              to make a significant impact in the recruitment sector.
+            </p>
+            <p>
+              As we expanded, we explored the cleaning sector and restaurant
+              business under separate brands. However, we soon recognized that
+              our core strengths were best aligned with recruitment and related
+              services. We then ventured into the fleet of taxi services and
+              food courier services, leveraging our expertise to deliver
+              exceptional results.
+            </p>
+            <p>
+              Consequently, we transitioned our recruitment services to Bhandari
+              Group Limited, which is now DIER Licensed and ISO Certified. Our
+              commitment remains steadfast in recruiting and acting as a temping
+              agency, focusing on placing the right person at the right job and
+              ensuring the optimal fit for both employees and employers.
+            </p>
+            <p>
+              Bhandari Brothers symbolizes the strength in unity of Brothers and
+              represents more than just a surname—it stands as a robust brand
+              committed to excellence . The name &quot;Bhandari&quot; means
+              treasurer, reflecting our role as custodians of experienced
+              candidates who will help fulfill our vision. Our goal is to expand
+              horizontally across Europe and vertically into Dubai and Nepal,
+              positioning ourselves as a leading one-stop solution for
+              interviews, recruitment, and temping services.
+            </p>
+            <p>
+              Thank you for being part of our journey. Together, we strive to
+              achieve excellence and make Bhandari Brothers a premier name
+              in the industry.
+            </p>
+          </div>
+          {/* right */}
+          <div className="relative sm:mx-12">
+            <Image
+              src="/images/md/Rajendra Bhattrai.png"
+              width={1240}
+              height={1240}
+              alt="Service Image"
+              className="w-full object-bottom h-[30rem] object-cover rounded-md bg-gray-50 rounded-b-[0px] relative z-[2] shadow-lg"
+            />
+            <div
+              id="controls"
+              className=" flex items-center p-5 bg-gray-50 h-24 rounded-b-[25px] relative z-[2] shadow-lg"
+            >
+              <div className="pl-3">
+                <h6 className="font-medium text-primary">Rajendra Bhattarai</h6>
+                <p className="text-gray-400">COO - Bhandari Brothers</p>
+              </div>
+            </div>
+            <div className="w-[90%] shadow-lg rounded-b-3xl h-8 bg-gray-200 m-auto relative z-[1] bottom-3"></div>
+            <div className="w-[70%] shadow-lg rounded-b-3xl h-5 bg-gray-200 m-auto relative z-0 bottom-3"></div>
+          </div>
+          
+        </div>
+      </div>
+
       {/* Our Tie-up */}
       <div className="bg-white p-6 rounded-lg border-t-2 mt-6">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">

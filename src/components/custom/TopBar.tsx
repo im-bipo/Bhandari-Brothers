@@ -8,7 +8,7 @@ const TopBar = () => {
           <div>
             <marquee behavior="scroll" direction="right" scrollamount={5}>
               We are ISO 9001:2015 Certified | Our DIER License Number:
-              00267-2024-00279-2024
+              00267-2024-00279-2024 | We are Trusted Recruitment and Outsource Partner.
             </marquee>
           </div>
 
