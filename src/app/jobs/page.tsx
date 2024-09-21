@@ -14,7 +14,7 @@ const Jobs: React.FC<JobsParamsType> = async ({ searchParams }) => {
   const query = searchParams.q;
 
   revalidatePath("/jobs");
-  const jobsData = (await getJobs());
+  const jobsData = await getJobs();
   if (jobsData.length === 0) {
     return (
       <div className="container mx-auto py-8">
@@ -24,7 +24,7 @@ const Jobs: React.FC<JobsParamsType> = async ({ searchParams }) => {
   }
   return (
     <div className="container mx-auto pt-8">
-       <main className="container border-b-2 ">
+      <main className="container border-b-2 ">
         <div className="flex flex-col gap-2 ">
           <h1 className="font-medium py-3">
             <span className="text-primary">Bhandari </span>
@@ -43,7 +43,7 @@ const Jobs: React.FC<JobsParamsType> = async ({ searchParams }) => {
       <JobSearch jobsData={jobsData as JobTypes[]} />
       <>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {jobsData.map((job, index) => (
+          {jobsData.reverse().map((job, index) => (
             <JobCard key={index} {...job} />
           ))}
         </div>
