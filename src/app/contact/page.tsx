@@ -54,7 +54,7 @@ const ContactUs: React.FC = () => {
       <section className="grid gap-4 md:grid-cols-2 rounded-lg items-center">
         <OfficeLocation
           location="Our Bulgaria Office"
-          mail="info@bhandaribrothers.com"
+          mail="info@bhandaribros.com"
           phone="+3567787789, +35627136935"
           address="Burgas, Municipality: Burgas City: Burgas, p.k. 8000 BIvd.
                 Maragidik No. 19, fl. 2, apartment office 1"
@@ -62,7 +62,7 @@ const ContactUs: React.FC = () => {
         />
         <OfficeLocation
           location="Our Greece Office"
-          mail="info@bhandaribrothers.com"
+          mail="info@bhandaribros.com"
           phone="+3567787789, +35627136935"
           address="34 Parasiou, Athens Centre 104 40, Greece"
           website="/"
