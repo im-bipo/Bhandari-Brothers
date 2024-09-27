@@ -63,10 +63,10 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a
-                  href="mailto:info@bhandaribrothers.com"
+                  href="mailto:info@bhandaribros.com"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  info@bhandaribrothers.com
+                  info@bhandaribros.com
                 </a>
               </li>
               <li>
@@ -88,69 +88,68 @@ const Footer = () => {
 
           {/* Images Section */}
           <div>
-            
-          <h3 className="text-2xl font-semibold mb-4 text-white">Featured</h3>
-          <div className="flex flex-wrap gap-2">
-            <Link href='/'>
-            <Image
-              width={200}
-              height={200}
-              src="/images/md/Bhandari Brothers.jpg"
-              alt="Description 1"
-              className="object-cover bg-white w-20 h-20 rounded"
-              />
+            <h3 className="text-2xl font-semibold mb-4 text-white">Featured</h3>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/">
+                <Image
+                  width={200}
+                  height={200}
+                  src="/images/md/Bhandari Brothers.jpg"
+                  alt="Description 1"
+                  className="object-cover bg-white w-20 h-20 rounded"
+                />
               </Link>
-              <Link href='https://www.globaltriforce.com'>
-            <Image
-              width={200}
-              height={200}
-              src="/images/md/triforce educational consultancy.jpg"
-              alt="Description 2"
-              className="object-cover bg-white w-20 h-20 rounded"
-            />
-            </Link>
-            <Link href='https://www.globaltriforce.com'>
-            <Image
-              width={200}
-              height={200}
-              src="/images/md/g-globe.jpg"
-              alt="Description 3"
-              className="object-cover bg-white w-20 h-20 rounded"
-            />
-            </Link>
-            <Link href='https://www.globaltriforce.com'>
-            <Image
-              width={200}
-              height={200}
-              src="/images/md/Triforce Tours and travels.jpg"
-              alt="Description 4"
-              className="object-cover bg-white w-20 h-20 rounded"
-            />
-            </Link>
-            <Link href='https://www.globaltriforce.com'>
-            <Image
-              width={200}
-              height={200}
-              src="/images/md/TRI_Force Human Resources.png"
-              alt="Description 4"
-              className="object-cover bg-white w-20 h-20 rounded"
-            />
-            </Link>
-            <Image
-              width={200}
-              height={200}
-              src="/images/md/Europe staff ltd.png"
-              alt="Description 4"
-              className="object-contain bg-white w-20 h-20 rounded"
-            />
-            <Image
-              width={200}
-              height={200}
-              src="/images/md/BPR-Cleaning.png"
-              alt="Description 4"
-              className="object-contain bg-white w-20 h-20 rounded"
-            />
-          </div>
+              <Link href="https://www.globaltriforce.com">
+                <Image
+                  width={200}
+                  height={200}
+                  src="/images/md/triforce educational consultancy.jpg"
+                  alt="Description 2"
+                  className="object-cover bg-white w-20 h-20 rounded"
+                />
+              </Link>
+              <Link href="https://www.globaltriforce.com">
+                <Image
+                  width={200}
+                  height={200}
+                  src="/images/md/g-globe.jpg"
+                  alt="Description 3"
+                  className="object-cover bg-white w-20 h-20 rounded"
+                />
+              </Link>
+              <Link href="https://www.globaltriforce.com">
+                <Image
+                  width={200}
+                  height={200}
+                  src="/images/md/Triforce Tours and travels.jpg"
+                  alt="Description 4"
+                  className="object-cover bg-white w-20 h-20 rounded"
+                />
+              </Link>
+              <Link href="https://www.globaltriforce.com">
+                <Image
+                  width={200}
+                  height={200}
+                  src="/images/md/TRI_Force Human Resources.png"
+                  alt="Description 4"
+                  className="object-cover bg-white w-20 h-20 rounded"
+                />
+              </Link>
+              <Image
+                width={200}
+                height={200}
+                src="/images/md/Europe staff ltd.png"
+                alt="Description 4"
+                className="object-contain bg-white w-20 h-20 rounded"
+              />
+              <Image
+                width={200}
+                height={200}
+                src="/images/md/BPR-Cleaning.png"
+                alt="Description 4"
+                className="object-contain bg-white w-20 h-20 rounded"
+              />
+            </div>
           </div>
         </div>
 
