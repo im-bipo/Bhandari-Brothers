@@ -274,9 +274,9 @@ const HeadOffice = () => {
         <Image
           width={1000}
           height={1000}
-          src="/images/md/Prakash Bhandari.jpg"
+          src="/images/md/BB Building.jpg"
           alt="Office Photo"
-          className="w-full h-[20rem] object-cover rounded-lg shadow-md"
+          className="lg:w-3/4 m-auto h-[25rem] object-center object-cover rounded-lg shadow-md"
         />
       </div>
     </section>
