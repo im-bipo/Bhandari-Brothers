@@ -77,7 +77,7 @@ const ContactUs: React.FC = () => {
         <OfficeLocation
           location="Triforce Human Resources Consultancy"
           mail="info@globaltriforce.com"
-          phone="+971567200669"
+          phone="+971 567676643"
           address="AI Rostamani Tower B M02, Sheikh Zayed Road, Dubai UAE"
           website="https://www.globaltriforce.com"
         />

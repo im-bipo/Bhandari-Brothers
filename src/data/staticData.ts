@@ -49,7 +49,6 @@ export const happyEmployee = [
   },
 ];
 
-
 export const happyClients = [
   {
     id: 1,
@@ -123,7 +122,7 @@ export const services = [
       "Industry Expertise: Our deep understanding of various industries ensures we deliver the most suitable talent.",
     ],
     imgSrc: "/images/services/recruitment.jpeg",
-    link:'/service/recruitment'
+    link: "/service/recruitment",
   },
   {
     header: "Outsourcing Services",
@@ -135,7 +134,7 @@ export const services = [
       "Quality Assurance: We ensure the highest quality standards in our outsourcing services.",
     ],
     imgSrc: "/images/services/outsourcing.jpeg",
-    link:'/service/outsourcing'
+    link: "/service/outsourcing",
   },
   {
     header: "Food Delivery Services",
@@ -147,15 +146,14 @@ export const services = [
       "Fast and Efficient Delivery: Our delivery team ensures your food arrives hot and fresh.",
     ],
     imgSrc: "/images/services/fooddelivery.jpeg",
-    link:'/service/foodDelivery'
+    link: "/service/foodDelivery",
   },
   {
     header: "Restaurant Services",
-    description:
-      `Mr. Tiramisu - Authentic Italian Cuisine by Bhandari Brothers Group Experience the rich flavors of Italy at Mr. Tiramisu. Operated by Bhandari Brothers Group, we offer a diverse menu of classic Italian dishes, from handmade pastas to delectable desserts, catering to all tastes.`,
+    description: `Mr. Tiramisu - Authentic Italian Cuisine by Bhandari Brothers Group Experience the rich flavors of Italy at Mr. Tiramisu. Operated by Bhandari Brothers Group, we offer a diverse menu of classic Italian dishes, from handmade pastas to delectable desserts, catering to all tastes.`,
     points: [],
     imgSrc: "/images/services/restaurant.jpeg",
-    link:'/service/restaurant'
+    link: "/service/restaurant",
   },
   {
     header: "Educational Services",
@@ -163,7 +161,7 @@ export const services = [
       "We partner with various prestigious colleges across Europe, offering consultancy-based services to help students achieve their academic and career aspirations. At Bhandari Brothers Group, we believe that education is the key to success, and our services provide the guidance and resources needed to support your journey.",
     points: [],
     imgSrc: "/images/services/education.jpeg",
-    link:'/service/education'
+    link: "/service/education",
   },
   {
     header: "Cleaning Services",
@@ -171,7 +169,7 @@ export const services = [
       "Offering a wide range of cleaning services across the EU, Bhandari Brothers Group ensures a spotless environment for every space. From domestic to commercial settings, our comprehensive cleaning solutions are tailored to meet all your needs.",
     points: [],
     imgSrc: "/images/services/cleaning.jpeg",
-    link:'/service/cleaning'
+    link: "/service/cleaning",
   },
   {
     header: "Taxi Services",
@@ -183,7 +181,7 @@ export const services = [
       "Professional Drivers: Our drivers are courteous, knowledgeable, and committed to providing excellent service.",
     ],
     imgSrc: "/images/services/taxi.jpeg",
-    link:'/service/taxi'
+    link: "/service/taxi",
   },
   {
     header: "Visa Services",
@@ -191,11 +189,9 @@ export const services = [
       "Embark on your international journey with ease through our comprehensive visa services. Whether you're seeking a work permit, a student visa, family reunification, or a business visa, we offer tailored solutions to meet your unique needs.",
     points: [],
     imgSrc: "/images/services/visa.jpeg",
-    link:'/service/visa'
+    link: "/service/visa",
   },
 ];
-
-
 
 import { NotebookPen, Route, SquarePlus, Waypoints } from "lucide-react";
 export const ourFeatures = [
@@ -227,3 +223,17 @@ export const ourFeatures = [
   },
 ];
 
+export const news = [
+  {
+    "id": "exciting-client-meet",
+    "title": "Exciting Client Meet!",
+    "description": "Our MD had an incredible meeting with one of our biggest clients, the Westin Dragonara Hotel and Resort, a prestigious five-star hotel in Malta. We also had a special interaction with our dedicated employees who have been with us for over 3 years! We are proud to be a licensed and ISO-certified company, ready to provide any staffing solutions you need.",
+    "image": "/images/md/Client Meet.png"
+  },
+  {
+    "id": "prakash-bhandari-joins-themaltachamber",
+    "title": "Prakash Bhandari Joins TheMaltaChamber!",
+    "description": "We are thrilled to announce that our founder, Prakash Bhandari, is now an official member of TheMaltaChamber! As the visionary behind Bhandari Group Limited, a licensed and ISO-certified outsourcing and recruitment agency, Prakash has led our expansion across Malta, Dubai, Bulgaria, and Greece. This membership strengthens our commitment to delivering comprehensive workforce solutions across the EU and beyond.",
+    "image": "/images/md/Prakash Bhandari.jpg"
+  }
+]
