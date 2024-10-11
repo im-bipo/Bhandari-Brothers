@@ -30,7 +30,7 @@ const NewsDetail: React.FC<Types> = ({ params }) => {
     );
   }
   return (
-    <div className="grid grid-cols-2 container">
+    <div className="grid lg:grid-cols-2 container">
       <div className="mb-10 py-10 px-5">
         <div className="text-primary font-semibold ">News</div>
         <h1 className="text-5xl font-bold my-5">
