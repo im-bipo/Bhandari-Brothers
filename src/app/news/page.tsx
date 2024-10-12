@@ -26,7 +26,7 @@ const News = () => {
       <div className="pb-20">
         <section className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {news.map((item, index) => (
+          {news.slice().reverse().map((item, index) => (
               <div
                 className="bg-white p-6 pb-0 rounded-lg relative"
                 key={index}

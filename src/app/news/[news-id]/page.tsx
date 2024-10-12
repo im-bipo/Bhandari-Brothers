@@ -40,13 +40,13 @@ const NewsDetail: React.FC<Types> = ({ params }) => {
           {newsData.description}
         </p>
       </div>
-      <div className="polygon">
+      <div className="">
         <Image
           height={1000}
           width={1500}
           src={newsData.image}
           alt="Bhandari Bros College + Business School"
-          className="w-full h-[25rem] object-cover"
+          className="w-full h-[25rem] object-contain"
         />
       </div>
     </div>
