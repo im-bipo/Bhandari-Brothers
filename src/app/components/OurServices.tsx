@@ -34,7 +34,7 @@ const OurServices = () => {
         {/* right  */}
         <div className="relative sm:mx-12">
           <img
-            src="/images/md/Prakash Bhandari.jpg"
+            src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725581/Prakash_Bhandari_ce7udq.jpg"
             width={300}
             height={300}
             alt="Service Image"
@@ -57,7 +57,7 @@ const OurServices = () => {
               className="w-fit  px-6 rounded-lg bg-gray-50 shadow-lg relative z-10 bottom-64 h-28 text-center text-gray-600  right-3 lg:left-5"
             >
               <Image
-                src="/bbLogo.png"
+                src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728726669/bbLogo_kqsjkn.png"
                 width={200}
                 height={200}
                 alt="Bhandari Brothers"

@@ -10,7 +10,7 @@ const StartHire = () => {
         <div className="bg-[#F5F5F5] overflow-hidden rounded-[10px] flex flex-col lg:flex-row lg:items-center justify-between">
           <div className="flex items-center lg:mr-36">
             <Image
-              src="/hire.png"
+              src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728726669/hire_vpm3i4.png"
               alt="Start hire hero"
               width={500}
               height={500}

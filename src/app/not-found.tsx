@@ -1,9 +1,9 @@
-'use client'
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Cog, Home, Truck, Utensils, PackageSearch } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Cog, Home, Truck, Utensils, PackageSearch } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export const NotFound = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -20,7 +20,7 @@ export const NotFound = () => {
       <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-white shadow-lg">
         <div className="w-full max-w-lg text-center">
           <Image
-            src="/bbLogo.png"
+            src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728726669/bbLogo_kqsjkn.png"
             alt="Bhandari Brothers Group"
             width={200}
             height={50}
@@ -31,7 +31,8 @@ export const NotFound = () => {
             Oops! Page Not Found
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            It looks like you&apos;re lost. Don&apos;t worry! You can go back to our homepage or explore some of our services below.
+            It looks like you&apos;re lost. Don&apos;t worry! You can go back to
+            our homepage or explore some of our services below.
           </p>
           <Link href="/">
             <motion.a
@@ -53,7 +54,8 @@ export const NotFound = () => {
               </Link>
               <Link href="/service/outsourcing">
                 <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-                  <PackageSearch className="inline-block mr-2" /> Outsourcing Services
+                  <PackageSearch className="inline-block mr-2" /> Outsourcing
+                  Services
                 </li>
               </Link>
               <Link href="/service/taxi">
@@ -63,7 +65,8 @@ export const NotFound = () => {
               </Link>
               <Link href="/service/food-delivery">
                 <li className="text-lg text-gray-800 bg-gray-100 hover:bg-primary hover:text-white duration-200 cursor-pointer font-medium p-4 rounded-lg transition-all">
-                  <Utensils className="inline-block mr-2" /> Food Delivery Services
+                  <Utensils className="inline-block mr-2" /> Food Delivery
+                  Services
                 </li>
               </Link>
               <Link href="/service/restaurant">
@@ -81,7 +84,7 @@ export const NotFound = () => {
         <motion.div
           className="flex justify-center"
           animate={{ rotate: [0, 360], scale: [1, 1.2, 1] }}
-          transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         >
           <Cog size={120} color="#ED1B26" />
         </motion.div>
@@ -92,9 +95,12 @@ export const NotFound = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          <h3 className="text-gray-800 text-2xl mb-4">We’re always here to help!</h3>
+          <h3 className="text-gray-800 text-2xl mb-4">
+            We’re always here to help!
+          </h3>
           <p className="text-gray-700 text-lg max-w-md">
-            Our services are designed to meet all your needs, from recruitment and outsourcing to taxi and food delivery services.
+            Our services are designed to meet all your needs, from recruitment
+            and outsourcing to taxi and food delivery services.
           </p>
         </motion.div>
 

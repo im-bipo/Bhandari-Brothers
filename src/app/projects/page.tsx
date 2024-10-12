@@ -33,7 +33,7 @@ const Projects = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 pb-0 rounded-lg relative">
               <img
-                src="/images/md/College and Business School.png"
+                src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725582/College_and_Business_School_hn6i5b.png"
                 alt=" Bhandari Brothers College and Business School"
                 className="w-full object-cover mb-4 rounded-md"
               />
@@ -56,7 +56,7 @@ const Projects = () => {
 
             <div className="bg-white p-6 pb-0 rounded-lg relative">
               <img
-                src="/images/md/INN Hotel.jpg"
+                src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725580/INN_Hotel_dwhayj.jpg"
                 alt="Bhandari Brothers INN Hotel"
                 className="w-full object-cover mb-4 rounded-md"
               />

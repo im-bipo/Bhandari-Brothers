@@ -274,7 +274,7 @@ const HeadOffice = () => {
         <Image
           width={1000}
           height={1000}
-          src="/images/md/BB Building.jpg"
+          src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725576/BB_Building_rfeojx.png"
           alt="Office Photo"
           className="lg:w-3/4 m-auto h-[25rem] object-center object-cover rounded-lg shadow-md"
         />

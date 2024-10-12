@@ -37,7 +37,7 @@ const AvailableJobs = async () => {
         {jobs.map((job, index) => (
           <Link href={job.$id} key={index} className="flex py-2">
             <Image
-              src="/bbLogo.png"
+              src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728726669/bbLogo_kqsjkn.png"
               height={100}
               width={100}
               alt="Componylogo"

@@ -94,7 +94,7 @@ const Footer = () => {
                 <Image
                   width={200}
                   height={200}
-                  src="/images/md/Bhandari Brothers.jpg"
+                  src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728726669/bbLogo_kqsjkn.png"
                   alt="Description 1"
                   className="object-cover bg-white w-20 h-20 rounded"
                 />
@@ -103,7 +103,7 @@ const Footer = () => {
                 <Image
                   width={200}
                   height={200}
-                  src="/images/md/triforce educational consultancy.jpg"
+                  src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725582/triforce_educational_consultancy_cqomsp.jpg"
                   alt="Description 2"
                   className="object-cover bg-white w-20 h-20 rounded"
                 />
@@ -112,7 +112,7 @@ const Footer = () => {
                 <Image
                   width={200}
                   height={200}
-                  src="/images/md/g-globe.jpg"
+                  src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725579/g-globe_jn2ju8.jpg"
                   alt="Description 3"
                   className="object-cover bg-white w-20 h-20 rounded"
                 />
@@ -121,7 +121,7 @@ const Footer = () => {
                 <Image
                   width={200}
                   height={200}
-                  src="/images/md/Triforce Tours and travels.jpg"
+                  src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725583/Triforce_Tours_and_travels_bi44am.jpg"
                   alt="Description 4"
                   className="object-cover bg-white w-20 h-20 rounded"
                 />
@@ -130,7 +130,7 @@ const Footer = () => {
                 <Image
                   width={200}
                   height={200}
-                  src="/images/md/TRI_Force Human Resources.png"
+                  src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725584/TRI_Force_Human_Resources_gy5fty.png"
                   alt="Description 4"
                   className="object-cover bg-white w-20 h-20 rounded"
                 />
@@ -138,14 +138,14 @@ const Footer = () => {
               <Image
                 width={200}
                 height={200}
-                src="/images/md/Europe staff ltd.png"
+                src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725581/Europe_staff_ltd_o2iaiu.png"
                 alt="Description 4"
                 className="object-contain bg-white w-20 h-20 rounded"
               />
               <Image
                 width={200}
                 height={200}
-                src="/images/md/BPR-Cleaning.png"
+                src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725578/BPR-Cleaning_ndigsl.png"
                 alt="Description 4"
                 className="object-contain bg-white w-20 h-20 rounded"
               />

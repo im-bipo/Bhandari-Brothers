@@ -10,7 +10,7 @@ const NavBar = async () => {
         <div className="container mx-auto flex justify-between items-center py-1 px-6">
           <Link href="/">
             <Image
-              src="/bbLogo.png"
+              src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728726669/bbLogo_kqsjkn.png"
               alt="Bhandari Brothers"
               height={200}
               width={200}

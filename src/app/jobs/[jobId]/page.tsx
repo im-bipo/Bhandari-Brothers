@@ -16,7 +16,7 @@ const JobDetails: React.FC<JobDetailsParams> = async ({ params }) => {
         <section className="pb-4 border-b-2 border-slate-200">
           <div className="flex">
             <Image
-              src="/bbLogo.png"
+              src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728726669/bbLogo_kqsjkn.png"
               height={300}
               width={300}
               alt="Compony logo"

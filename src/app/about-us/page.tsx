@@ -12,7 +12,7 @@ const AboutUs = () => {
           <div className="polygon-reverse">
             <img
               alt="Bhandari Brothers"
-              src="/images/md/Prakash Bhandari.jpg"
+              src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725581/Prakash_Bhandari_ce7udq.jpg"
               className="w-full rounded-md h-[30rem] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-500 to-transparent opacity-40 rounded-md"></div>
@@ -49,21 +49,21 @@ const AboutUs = () => {
             alt="DIER Certificate"
             width={1000}
             height={1500}
-            src="/images/md/DIER_Certificate_1.jpg"
+            src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725577/DIER_Certificate_1_cr2lug.jpg"
             className="w-64 p-4"
           />
           <Image
             alt="DIER Certificate"
             width={1000}
             height={1500}
-            src="/images/md/DIER_Certificate_2.jpg"
+            src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725578/DIER_Certificate_2_gybbfv.jpg"
             className="w-64 p-4"
           />
           <Image
             alt="iso cerrtificaition"
             width={1000}
             height={1500}
-            src="/images/md/ISO_Certificate.png"
+            src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725585/ISO_Certificate_ppzlua.png"
             className="w-64 p-4 object-contain"
           />
         </div>
@@ -193,7 +193,7 @@ const AboutUs = () => {
           {/* right */}
           <div className="relative sm:mx-12">
             <Image
-              src="/images/md/Rajendra Bhattrai.png"
+              src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725585/Rajendra_Bhattrai_hmooux.png"
               width={1240}
               height={1240}
               alt="Service Image"
@@ -225,7 +225,7 @@ const AboutUs = () => {
             <Image
               height={300}
               width={300}
-              src="/images/md/Europe staff ltd.png"
+              src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725581/Europe_staff_ltd_o2iaiu.png"
               alt="Europe Staff Limited Logo"
               className="w-full h-20 object-contain"
             />
@@ -239,7 +239,7 @@ const AboutUs = () => {
             <Image
               height={300}
               width={300}
-              src="/images/md/BPR-Cleaning.png"
+              src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725578/BPR-Cleaning_ndigsl.png"
               alt="BPR Brose Ltd Logo"
               className="w-full h-20 object-contain"
             />

@@ -40,7 +40,7 @@ const AddJobForm = () => {
           <Image
             height={800}
             width={1200}
-            src="/images/md/we_are_hiring.jpg"
+            src="https://res.cloudinary.com/dkhb36nqy/image/upload/v1728725584/we_are_hiring_jy6mpa.jpg"
             alt="Job"
             className="rounded-md"
           />
